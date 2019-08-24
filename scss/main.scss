@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+@import "utilities";
+
+$border: 1px solid rgb(224, 167, 184);
+$border-radius: 5px;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+#showcase {
+  background: rgba(216, 10, 147, 0.39);
+  position: relative;
+  height: 100vh;
+
+  &::before {
+    content: "";
+    background: url("../img/background.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  #title {
+    color: white;
+    font-family: "Sacramento", cursive;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  #profile {
+    background: rgba(255, 255, 255, 0.795);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    #img-content {
+      img {
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+      display: flex;
+      flex-direction: column;
+
+      #show {
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        padding: 0.8rem 0.5rem;
+        border-radius: 360px;
+        background: rgb(219, 13, 92);
+        color: white;
+      }
+    }
+    #pro-content {
+      text-align: left;
+
+      #name-profile {
+        margin-bottom: 0.5rem;
+      }
+      li {
+        max-width: 400px;
+        padding: 0.5rem 1rem;
+        border-top: $border;
+        border-left: $border;
+        border-right: $border;
+
+        &:first-child {
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+        }
+        &:last-child {
+          border-bottom: $border;
+          border-bottom-left-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+        }
+      }
+    }
+  }
+
+  #next {
+    border: none;
+    background: rgb(134, 21, 64);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}

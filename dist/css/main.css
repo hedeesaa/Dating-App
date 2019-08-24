@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+.container {
+  max-width: 600px;
+  margin: 0 auto; }
+
+ul {
+  list-style: none; }
+
+.padding-1 {
+  padding: 1rem; }
+
+.padding-top-1 {
+  padding-top: 1rem; }
+
+.margin-top-1 {
+  margin-top: 2rem; }
+
+.margin-left-2 {
+  margin-left: 2rem; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
+#showcase {
+  background: rgba(216, 10, 147, 0.39);
+  position: relative;
+  height: 100vh; }
+  #showcase::before {
+    content: "";
+    background: url("../img/background.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1; }
+  #showcase #title {
+    color: white;
+    font-family: "Sacramento", cursive;
+    font-size: 3.5rem;
+    text-align: center; }
+  #showcase #profile {
+    background: rgba(255, 255, 255, 0.795);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr; }
+    #showcase #profile #img-content {
+      display: flex;
+      flex-direction: column; }
+      #showcase #profile #img-content img {
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        width: 100%; }
+      #showcase #profile #img-content #show {
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        padding: 0.8rem 0.5rem;
+        border-radius: 360px;
+        background: #db0d5c;
+        color: white; }
+    #showcase #profile #pro-content {
+      text-align: left; }
+      #showcase #profile #pro-content #name-profile {
+        margin-bottom: 0.5rem; }
+      #showcase #profile #pro-content li {
+        max-width: 400px;
+        padding: 0.5rem 1rem;
+        border-top: 1px solid #e0a7b8;
+        border-left: 1px solid #e0a7b8;
+        border-right: 1px solid #e0a7b8; }
+        #showcase #profile #pro-content li:first-child {
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px; }
+        #showcase #profile #pro-content li:last-child {
+          border-bottom: 1px solid #e0a7b8;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px; }
+  #showcase #next {
+    border: none;
+    background: #861540;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; }
